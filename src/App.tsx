@@ -7,7 +7,7 @@ import useOrder from "./hooks/useOrder";
 
 function App() {
 
-  const { order, addItem, removeItem, tip, setTip } = useOrder()
+  const { order, tip, setTip, addItem, removeItem, placeOrder } = useOrder()
 
   return (
     <>
@@ -18,7 +18,7 @@ function App() {
       <main className="max-w-7xl mx-auto py-20 grid  md:grid-cols-2">
         <div className="p-5">
           <h2 className="text-4xl font-black">Menú</h2>
-          
+
           <div className="space-y-3 mt-10">
             {menuItems.map(item => (
               <MenuItem
@@ -31,19 +31,27 @@ function App() {
         </div>
 
         <div className=" border border-dashed border-slate-300 p-5 rounded-lg space-y-10">
-          <OrderContents
-          order={order}
-          removeItem={removeItem}
-           />
+          {order.length > 0 ? (
+            <>
+              <OrderContents
+                order={order}
+                removeItem={removeItem}
+              />
 
-           <TipPercentageForm
-             setTip={setTip}
-            />
+              <TipPercentageForm
+                setTip={setTip}
+                tip={tip}
+              />
 
-          <OrderTotals
-            order={order}
-            tip={tip}
-          />
+              <OrderTotals
+                order={order}
+                tip={tip}
+                placeOrder={placeOrder}
+              />
+            </>
+          ) : (
+            <p className="text-center">La orden está vacía</p>
+          )}
 
         </div>
       </main>
