@@ -6,7 +6,8 @@ Este proyecto es una aplicación web desarrollada completamente con **TypeScript
 
 ## Demo 🚀
 
-👉[Prueba la calculadora en vivo aquí](https://gregarious-mermaid-c5c8ea.netlify.app/)
+
+<a href="https://gregarious-mermaid-c5c8ea.netlify.app/" target="_blank">Prueba la calculadora en vivo aquí</a> 
 
 ## Screenshots
 
