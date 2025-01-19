@@ -10,7 +10,7 @@ Este proyecto es una aplicación web desarrollada completamente con **TypeScript
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](public/screenshot.png)
 
 
 ## Main Features ✨
