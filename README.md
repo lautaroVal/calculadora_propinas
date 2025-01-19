@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Calculadora de Propinas y Consumo
 
-Currently, two official plugins are available:
+Este proyecto es una aplicación web desarrollada completamente con **TypeScript** que permite calcular el consumo y las propinas en un restaurante de forma interactiva y práctica. Para el diseño se utilizó React más el framework Tailwind CSS. Es ideal para practicar conceptos avanzados como **State Management**, **Custom Hooks**, y la organización de archivos en TypeScript.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Demo 🚀
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+👉[Prueba la calculadora en vivo aquí](https://gregarious-mermaid-c5c8ea.netlify.app/)
 
-- Configure the top-level `parserOptions` property like this:
+## Screenshots
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Main Features ✨
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Gestión de consumo interactiva**: Visualiza un menú con artículos y precios. Agrega artículos al consumo con un solo clic. Modifica el consumo eliminando artículos fácilmente.
+- **Cálculo de propinas en tiempo real**: Ajusta el porcentaje de propina (10%, 20%, 50%). Observa cómo el subtotal, la propina y el total a pagar se actualizan dinámicamente.
+- **Control interno de órdenes**: Almacena simuladamente las órdenes con un botón de "Guardar orden". Restaura el sistema para ingresar nuevos consumos.
+
+
+
+## What I learned with this project 📚
+### Technologies used 
+
+**Client:** React, TailwindCSS
+
+**Server:** TypeScript, Vite, Custom Hooks, State Management
+
+### Application optimization:
+
+- Creación de un Custom Hook (useTipCalculator) para encapsular la lógica del cálculo de propinas.
+- Uso de useMemo y useCallback para optimizar el rendimiento evitando renderizados innecesarios: 
+
+   * useMemo: Memoriza valores derivados de cálculos complejos, mejorando el rendimiento.
+   * useCallback: Memoriza funciones para evitar que cambien innecesariamente entre renderizados.
+
+
+### Focus on best practices:
+
+- Implementación modular y reutilizable de componentes.
+- Aplicación de principios de State Management para controlar el estado de consumo y propinas de forma eficiente.
+
