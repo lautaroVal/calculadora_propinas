@@ -22,7 +22,7 @@ Este proyecto es una aplicación web desarrollada completamente con **TypeScript
 
 
 ## What I learned with this project 📚
-### Technologies used 
+### Technologies used: 
 
 **Client:** React, TailwindCSS
 
